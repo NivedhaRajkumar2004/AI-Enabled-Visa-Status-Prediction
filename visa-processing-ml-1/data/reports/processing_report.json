@@ -1,0 +1,32 @@
+{
+  "total_rows": 8325,
+  "total_columns": 23,
+  "missing_values": "0",
+  "duplicate_rows": "0",
+  "schema": {
+    "applicant_id": "object",
+    "application_date": "datetime64[ns]",
+    "decision_date": "datetime64[ns]",
+    "visa_status": "object",
+    "nationality": "object",
+    "processing_center": "object",
+    "job_title": "object",
+    "job_info_education": "object",
+    "naics_title": "object",
+    "annual_income_usd": "float64",
+    "processing_time_days": "int64",
+    "application_date_year": "int32",
+    "application_date_month": "int32",
+    "application_date_day": "int32",
+    "application_date_dayofweek": "int32",
+    "decision_date_year": "int32",
+    "decision_date_month": "int32",
+    "decision_date_day": "int32",
+    "decision_date_dayofweek": "int32",
+    "annual_income_usd_to_processing_time_days_ratio": "float64",
+    "applicant_id_frequency": "int64",
+    "visa_status_frequency": "int64",
+    "nationality_frequency": "int64"
+  },
+  "status": "PASSED"
+}

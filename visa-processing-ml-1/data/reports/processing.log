@@ -1,0 +1,162 @@
+2026-02-13 15:33:50,549 - VisaProcessing - INFO - [92m
+======================================================================[0m
+2026-02-13 15:33:50,549 - VisaProcessing - INFO - [92mMILESTONE 1: ADVANCED DATA PREPROCESSING PIPELINE[0m
+2026-02-13 15:33:50,550 - VisaProcessing - INFO - [92m======================================================================[0m
+2026-02-13 15:33:50,575 - VisaProcessing - INFO - [92m  Shape: 10000 rows × 12 columns[0m
+2026-02-13 15:33:50,575 - VisaProcessing - INFO - [92m
+[STEP 1] Analyzing data quality...[0m
+2026-02-13 15:33:50,577 - VisaProcessing - INFO - [92m
+  Missing Values:[0m
+2026-02-13 15:33:50,578 - VisaProcessing - INFO - [92m    nationality: 3 (0.03%)[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    job_info_education: 967 (9.67%)[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    education_level: 798 (7.98%)[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    naics_title: 6310 (63.10%)[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    annual_income_usd: 2 (0.02%)[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m  Total missing: 8080[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m
+  Data Types:[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    applicant_id: object[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    application_date: object[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    decision_date: object[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    visa_status: object[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    nationality: object[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    processing_center: object[0m
+2026-02-13 15:33:50,579 - VisaProcessing - INFO - [92m    job_title: object[0m
+2026-02-13 15:33:50,581 - VisaProcessing - INFO - [92m    job_info_education: object[0m
+2026-02-13 15:33:50,581 - VisaProcessing - INFO - [92m    education_level: object[0m
+2026-02-13 15:33:50,581 - VisaProcessing - INFO - [92m    naics_title: object[0m
+2026-02-13 15:33:50,581 - VisaProcessing - INFO - [92m    annual_income_usd: object[0m
+2026-02-13 15:33:50,581 - VisaProcessing - INFO - [92m    processing_time_days: int64[0m
+2026-02-13 15:33:50,588 - VisaProcessing - INFO - [92m
+  Duplicate rows: 0[0m
+2026-02-13 15:33:50,590 - VisaProcessing - INFO - [92m
+[STEP 2A] Cleaning salary column...[0m
+2026-02-13 15:33:50,590 - VisaProcessing - INFO - [92m  Unrealistic salary values detected: 333[0m
+2026-02-13 15:33:50,600 - VisaProcessing - INFO - [92m  Salary range: $1649.35 - $938000.00[0m
+2026-02-13 15:33:50,600 - VisaProcessing - INFO - [92m
+[STEP 2B] Cleaning education columns...[0m
+2026-02-13 15:33:50,600 - VisaProcessing - INFO - [92m  Multiple education columns found: ['job_info_education', 'education_level'][0m
+2026-02-13 15:33:50,608 - VisaProcessing - INFO - [92m
+[STEP 2C] Standardizing state names...[0m
+2026-02-13 15:33:50,608 - VisaProcessing - INFO - [92m
+[STEP 3] Handling missing values...[0m
+2026-02-13 15:33:50,623 - VisaProcessing - INFO - [92m  Remaining missing values: 0[0m
+2026-02-13 15:33:50,623 - VisaProcessing - INFO - [92m
+[STEP 4] Removing duplicates...[0m
+2026-02-13 15:33:50,634 - VisaProcessing - INFO - [92m  Remaining rows: 10000[0m
+2026-02-13 15:33:50,634 - VisaProcessing - INFO - [92m
+[STEP 5] Detecting and removing outliers...[0m
+2026-02-13 15:33:50,637 - VisaProcessing - INFO - [92m  Found 341 outliers in 'annual_income_usd'[0m
+2026-02-13 15:33:50,640 - VisaProcessing - INFO - [92m  Found 1334 outliers in 'processing_time_days'[0m
+2026-02-13 15:33:50,653 - VisaProcessing - INFO - [92m
+[STEP 6] Engineering date features...[0m
+2026-02-13 15:33:50,675 - VisaProcessing - INFO - [92m
+[STEP 7] Engineering numeric features...[0m
+2026-02-13 15:33:50,677 - VisaProcessing - INFO - [92m
+[STEP 8] Engineering categorical features...[0m
+2026-02-13 15:33:50,688 - VisaProcessing - INFO - [92m
+[STEP 9] Validating data completeness...[0m
+2026-02-13 15:33:50,697 - VisaProcessing - INFO - [92m  Missing values: 0[0m
+2026-02-13 15:33:50,699 - VisaProcessing - INFO - [92m
+[STEP 10] Validating data consistency...[0m
+2026-02-13 15:33:50,705 - VisaProcessing - INFO - [92m  Duplicate rows: 0[0m
+2026-02-13 15:33:50,707 - VisaProcessing - INFO - [92m
+[STEP 11] Validating schema:[0m
+2026-02-13 15:33:50,707 - VisaProcessing - INFO - [92m    applicant_id: object[0m
+2026-02-13 15:33:50,707 - VisaProcessing - INFO - [92m    application_date: datetime64[ns][0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    decision_date: datetime64[ns][0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    visa_status: object[0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    nationality: object[0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    processing_center: object[0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    job_title: object[0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    job_info_education: object[0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    naics_title: object[0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    annual_income_usd: float64[0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    processing_time_days: int64[0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    application_date_year: int32[0m
+2026-02-13 15:33:50,708 - VisaProcessing - INFO - [92m    application_date_month: int32[0m
+2026-02-13 15:33:50,709 - VisaProcessing - INFO - [92m    application_date_day: int32[0m
+2026-02-13 15:33:50,709 - VisaProcessing - INFO - [92m    application_date_dayofweek: int32[0m
+2026-02-13 15:33:50,709 - VisaProcessing - INFO - [92m    decision_date_year: int32[0m
+2026-02-13 15:33:50,709 - VisaProcessing - INFO - [92m    decision_date_month: int32[0m
+2026-02-13 15:33:50,709 - VisaProcessing - INFO - [92m    decision_date_day: int32[0m
+2026-02-13 15:33:50,709 - VisaProcessing - INFO - [92m    decision_date_dayofweek: int32[0m
+2026-02-13 15:33:50,709 - VisaProcessing - INFO - [92m    annual_income_usd_to_processing_time_days_ratio: float64[0m
+2026-02-13 15:33:50,709 - VisaProcessing - INFO - [92m    applicant_id_frequency: int64[0m
+2026-02-13 15:33:50,709 - VisaProcessing - INFO - [92m    visa_status_frequency: int64[0m
+2026-02-13 15:33:50,709 - VisaProcessing - INFO - [92m    nationality_frequency: int64[0m
+2026-02-13 15:33:50,711 - VisaProcessing - INFO - [92m
+============================================================[0m
+2026-02-13 15:33:50,711 - VisaProcessing - INFO - [92mValidation Status: PASSED[0m
+2026-02-13 15:33:50,711 - VisaProcessing - INFO - [92m============================================================[0m
+2026-02-13 15:33:50,749 - VisaProcessing - INFO - [92m
+======================================================================[0m
+2026-02-13 15:33:50,749 - VisaProcessing - INFO - [92m======================================================================[0m
+2026-02-14 17:58:35,778 - VisaProcessing - INFO - [92m
+======================================================================[0m
+2026-02-14 17:58:35,783 - VisaProcessing - INFO - [92mMILESTONE 1.5: DATA LEAKAGE REMOVAL[0m
+2026-02-14 17:58:35,783 - VisaProcessing - INFO - [92m======================================================================[0m
+2026-02-14 17:58:35,783 - VisaProcessing - INFO - [92m
+Loading processed data...[0m
+2026-02-14 17:58:35,817 - VisaProcessing - INFO - [92mLoaded: 8325 rows × 23 columns[0m
+2026-02-14 17:58:35,817 - VisaProcessing - INFO - [92m
+======================================================================[0m
+2026-02-14 17:58:35,817 - VisaProcessing - INFO - [92mREMOVING DATA LEAKAGE[0m
+2026-02-14 17:58:35,817 - VisaProcessing - INFO - [92m======================================================================[0m
+2026-02-14 17:58:35,817 - VisaProcessing - INFO - [92m
+[Decision] Removing data leakage columns...[0m
+2026-02-14 17:58:35,817 - VisaProcessing - INFO - [92mTask: Predict visa_status at application time[0m
+2026-02-14 17:58:35,822 - VisaProcessing - INFO - [92mData available: application_date only[0m
+2026-02-14 17:58:35,822 - VisaProcessing - INFO - [92mData NOT available: decision_date (hasn't happened yet)[0m
+2026-02-14 17:58:35,886 - VisaProcessing - INFO - [92m
+Removed 7 leakage columns:[0m
+2026-02-14 17:58:35,886 - VisaProcessing - INFO - [92m  - decision_date[0m
+2026-02-14 17:58:35,886 - VisaProcessing - INFO - [92m  - decision_date_year[0m
+2026-02-14 17:58:35,887 - VisaProcessing - INFO - [92m  - decision_date_month[0m
+2026-02-14 17:58:35,887 - VisaProcessing - INFO - [92m  - decision_date_day[0m
+2026-02-14 17:58:35,887 - VisaProcessing - INFO - [92m  - decision_date_dayofweek[0m
+2026-02-14 17:58:35,887 - VisaProcessing - INFO - [92m  - applicant_id[0m
+2026-02-14 17:58:35,888 - VisaProcessing - INFO - [92m  - applicant_id_frequency[0m
+2026-02-14 17:58:35,890 - VisaProcessing - INFO - [92m
+----------------------------------------------------------------------[0m
+2026-02-14 17:58:35,890 - VisaProcessing - INFO - [92mFINAL COLUMNS FOR ML TRAINING[0m
+2026-02-14 17:58:35,890 - VisaProcessing - INFO - [92m----------------------------------------------------------------------[0m
+2026-02-14 17:58:35,892 - VisaProcessing - INFO - [92m
+Total columns: 16[0m
+2026-02-14 17:58:35,892 - VisaProcessing - INFO - [92m
+Feature columns:[0m
+2026-02-14 17:58:35,893 - VisaProcessing - INFO - [92m  application_date: object[0m
+2026-02-14 17:58:35,894 - VisaProcessing - INFO - [92m  [TARGET] visa_status[0m
+2026-02-14 17:58:35,895 - VisaProcessing - INFO - [92m  nationality: object[0m
+2026-02-14 17:58:35,895 - VisaProcessing - INFO - [92m  processing_center: object[0m
+2026-02-14 17:58:35,895 - VisaProcessing - INFO - [92m  job_title: object[0m
+2026-02-14 17:58:35,895 - VisaProcessing - INFO - [92m  job_info_education: object[0m
+2026-02-14 17:58:35,895 - VisaProcessing - INFO - [92m  naics_title: object[0m
+2026-02-14 17:58:35,895 - VisaProcessing - INFO - [92m  annual_income_usd: float64[0m
+2026-02-14 17:58:35,895 - VisaProcessing - INFO - [92m  processing_time_days: int64[0m
+2026-02-14 17:58:35,895 - VisaProcessing - INFO - [92m  application_date_year: int64[0m
+2026-02-14 17:58:35,895 - VisaProcessing - INFO - [92m  application_date_month: int64[0m
+2026-02-14 17:58:35,895 - VisaProcessing - INFO - [92m  application_date_day: int64[0m
+2026-02-14 17:58:35,898 - VisaProcessing - INFO - [92m  application_date_dayofweek: int64[0m
+2026-02-14 17:58:35,898 - VisaProcessing - INFO - [92m  annual_income_usd_to_processing_time_days_ratio: float64[0m
+2026-02-14 17:58:35,898 - VisaProcessing - INFO - [92m  visa_status_frequency: int64[0m
+2026-02-14 17:58:35,898 - VisaProcessing - INFO - [92m  nationality_frequency: int64[0m
+2026-02-14 17:58:35,898 - VisaProcessing - INFO - [92m
+Total features: 15[0m
+2026-02-14 17:58:35,898 - VisaProcessing - INFO - [92mTarget variable: visa_status[0m
+2026-02-14 17:58:35,898 - VisaProcessing - INFO - [92m
+----------------------------------------------------------------------[0m
+2026-02-14 17:58:35,898 - VisaProcessing - INFO - [92mEXPORTING ML-READY DATASET[0m
+2026-02-14 17:58:35,898 - VisaProcessing - INFO - [92m----------------------------------------------------------------------[0m
+2026-02-14 17:58:35,950 - VisaProcessing - INFO - [92m  Shape: 8325 rows × 16 columns[0m
+2026-02-14 17:58:35,950 - VisaProcessing - INFO - [92m
+======================================================================[0m
+2026-02-14 17:58:35,953 - VisaProcessing - INFO - [92m======================================================================[0m
+2026-02-14 17:58:35,953 - VisaProcessing - INFO - [92m
+Your dataset is now ready for ML training![0m
+2026-02-14 17:58:35,958 - VisaProcessing - INFO - [92m
+Next steps:[0m
+2026-02-14 17:58:35,958 - VisaProcessing - INFO - [92m1. Exploratory Data Analysis (EDA)[0m
+2026-02-14 17:58:35,958 - VisaProcessing - INFO - [92m2. Handle class imbalance (if needed)[0m
+2026-02-14 17:58:35,960 - VisaProcessing - INFO - [92m3. Train classification model[0m
+2026-02-14 17:58:35,960 - VisaProcessing - INFO - [92m4. Evaluate model performance[0m
