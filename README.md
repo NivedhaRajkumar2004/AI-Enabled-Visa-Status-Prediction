@@ -1,2 +1,47 @@
-# AI-Enabled-Visa-Status-Prediction
-Developed a production-style Python data engineering pipeline for visa application processing with automated validation, feature engineering, and ML-ready export
+📝 Description
+visa-processing-ml-1 is a sophisticated machine learning solution built with Python, designed to automate and optimize the visa application workflow. The project offers a versatile architecture featuring a powerful API for integration into existing services, a Command Line Interface (CLI) for streamlined operational control, and a rigorous testing framework to ensure reliability and precision in processing. Whether for large-scale automation or targeted visa classification tasks, this tool provides a robust foundation for modern immigration tech solutions.
+
+✨ Features
+🌐 Api
+🧪 Testing
+💻 Cli
+🛠️ Tech Stack
+🐍 Python
+📦 Key Dependencies
+pandas: 2.0.3
+numpy: 1.24.3
+scikit-learn: 1.3.0
+python-dotenv: 1.0.0
+pyyaml: 6.0
+📁 Project Structure
+visa-processing-ml-1
+├── data
+│   ├── processed
+│   │   ├── visa_applications_cleaned.csv
+│   │   └── visa_applications_no_leakage.csv
+│   ├── raw
+│   │   └── visa_applications.csv
+│   └── reports
+│       └── processing_report.json
+├── requirements.txt
+├── run_leakage_removal.py
+├── run_pipeline.py
+├── setup.py
+└── src
+    ├── __init__.py
+    ├── config.py
+    ├── data_cleaner.py
+    ├── data_loader.py
+    ├── data_validator.py
+    ├── feature_engineer.py
+    ├── logger.py
+    ├── pipeline.py
+    └── remove_data_leakage.py
+🛠️ Development Setup
+Python Setup
+Install Python (v3.8+ recommended)
+Create a virtual environment: python -m venv venv
+Activate the environment:
+Windows: venv\Scripts\activate
+Unix/MacOS: source venv/bin/activate
+Install dependencies: pip install -r requirements.txt
