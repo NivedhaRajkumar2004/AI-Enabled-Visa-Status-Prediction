@@ -1,4 +1,5 @@
 import logging
+import sys
 from pathlib import Path
 from src.config import LOG_FILE, LOG_LEVEL, LOG_FORMAT
 
@@ -25,16 +26,16 @@ def setup_logger(name, log_file=None, log_level=LOG_LEVEL):
     logger = logging.getLogger(name)
     logger.setLevel(log_level)
     
-    # Console handler
-    console_handler = logging.StreamHandler()
+    # Console handler with UTF-8 encoding
+    console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(log_level)
     console_formatter = ColoredFormatter(LOG_FORMAT)
     console_handler.setFormatter(console_formatter)
     logger.addHandler(console_handler)
     
-    # File handler
+    # File handler with UTF-8 encoding
     if log_file:
-        file_handler = logging.FileHandler(log_file)
+        file_handler = logging.FileHandler(log_file, encoding='utf-8')
         file_handler.setLevel(log_level)
         file_formatter = logging.Formatter(LOG_FORMAT)
         file_handler.setFormatter(file_formatter)
