@@ -216,6 +216,9 @@ The build output will be in the `.next` directory. You can then deploy this outp
 
 For deploying the Python pipeline, consider containerization (e.g., Docker, not currently configured) for consistent environments, or setting up scheduled execution on a server for regular data processing. The trained model (`best_model_tuned.pkl`) can be used for inference in a separate service or integrated into an application.
 
+## Live Deployment
+https://visa-27v.pages.dev/analytics
+
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE) - see the `LICENSE` file for details.
